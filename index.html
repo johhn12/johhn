@@ -35,6 +35,7 @@
     <link rel="preload" fetchpriority="high" as="image" type="image/webp" href="image/faviconn.webp">
     <link rel="canonical" href="https://toygercatbreeders.com/">
     <link rel="shortcut icon" type="image/webp" href="image/faviconn.webp">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="7GXyb6oag3szvleP1fTgJw" async></script>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>tailwind.config={theme:{extend:{colors:{primary:'#f59e0b',secondary:'#0369a1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
@@ -47,6 +48,8 @@
     <link rel="preload" href="https://cdn.tailwindcss.com/3.4.16"> 
     <style>
         :where([class^=ri-])::before{content:"\f3c2"}body{font-family:Poppins,sans-serif}.testimonial-card::before,h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif}.hero{background-image:url(image/background.webp);background-size:cover;background-position:left center}input:focus{outline:0}.nav-link{position:relative}.nav-link::after{content:'';position:absolute;width:0;height:2px;bottom:-4px;left:0;background-color:#f59e0b;transition:width .3s}.nav-link.active::after,.nav-link:hover::after{width:100%}.testimonial-card::before{content:'"';position:absolute;top:-30px;left:20px;font-size:80px;color:rgba(245,158,11,.1)}.kitten-card:hover .kitten-overlay{opacity:1}.kitten-card:hover img{transform:scale(1.05)}
+        html { margin: 0; padding: 0; height: 100%; }
+        #map { width: 100%; height: 40vh; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -826,6 +829,13 @@
         </div>
     </section>
 
+    <!-- Map -->
+    <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+    <div id="map"></div>
+    </div> 
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
@@ -1013,6 +1023,34 @@
         // Handle window resize
         window.addEventListener('resize', updateCarousel);
     </script>
+    <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  // Initialize the map
+  var map = L.map('map').setView([40.4173, -82.9071], 7); // Coordinates for Ohio
+
+  // Add OpenStreetMap tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 18,
+  }).addTo(map);
+
+  // Add a marker with popup
+  var marker = L.marker([40.4173, -82.9071]).addTo(map);
+  marker.bindPopup("<strong>Welcome to Ohio</strong><br>The heart of it all!").openPopup();
+
+  // Add zoom control in bottom right
+  map.zoomControl.setPosition('bottomright');
+
+  // Optional: Add circle overlay
+  var circle = L.circle([40.4173, -82.9071], {
+    color: 'blue',
+    fillColor: '#3f93ff',
+    fillOpacity: 0.4,
+    radius: 50000
+  }).addTo(map).bindPopup("Approximate 50km radius around Ohio center.");
+
+</script>
 </script>
 </body>
 </html>
