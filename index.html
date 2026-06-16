@@ -994,6 +994,33 @@
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i').parentElement;
+                    
+                    // Toggle current FAQ
+                    answer.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    
+                    // Close other FAQs
+                    faqButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherAnswer = otherButton.nextElementSibling;
+                            const otherIcon = otherButton.querySelector('i').parentElement;
+                            
+                            otherAnswer.classList.add('hidden');
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+        });
         
      // Testimonial Carousel
      const container = document.getElementById('testimonials-container');
