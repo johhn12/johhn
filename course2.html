@@ -56,18 +56,69 @@
             <a href="index.html"aria-label="home"><img src="image/faviconn.webp" alt="Toyger Cat For Sale"></a>
             
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
+                <a href="index.html" class="nav-link active text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
                 <a href="about.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">About Us</a>
                 <a href="course1.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Available Kittens</a>
                 <a href="Health.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Health Guarantee</a>
-                <a href="course2.html" class="nav-link active text-gray-800 hover:text-primary font-medium transition-colors">Kings & Queens</a>
+                <a href="course2.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Studs & Queens</a>
                 <a href="course3.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Gallery</a>
-                <a href="blog2.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Adoption Process</a>
+                <a href="faqs.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">FAQs</a>
+                <div class="relative group">
+                    <button class="nav-link text-gray-800 font-medium hover:text-primary transition-colors flex items-center !rounded-button whitespace-nowrap">
+                        Info
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md p-2 hidden group-hover:block z-10">
+                        <a href="faq.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Toyger Breed</a>
+                        <a href="blog2.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Adoption Process</a>
+                        <a href="transport.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Pet Transport</a>
+                        <a href="Privacy.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Privacy Policy</a>
+                        <a href="Refund.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Refund Policy</a>
+                        <a href="Terms.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Terms of Service</a>
+                        <a href="Shipping.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Shipping Policy</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Contact Us</a>
-                <a href="faq.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Blog</a>
+                <a href="blog.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Blog</a>
             </nav>
-            <div class="lg:hidden w-10 h-10 flex items-center justify-center">
-                <i class="ri-menu-line ri-2x text-gray-800"></i>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 !rounded-button whitespace-nowrap">
+                <i class="ri-menu-line ri-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation (Hidden by default) -->
+        <div class="hidden md:hidden bg-white shadow-lg absolute w-full z-20">
+            <div class="px-4 py-3 space-y-1">
+                <a href="index.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Home</a>
+                <a href="about.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">About Us</a>
+                <a href="course1.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Available Kittens</a>
+                <a href="Health.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Health Guarantee</a>
+                <a href="course2.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Studs & Queens</a>
+                <div class="px-3 py-2">
+                    <button class="nav-link flex items-center justify-between w-full text-gray-800 font-medium !rounded-button whitespace-nowrap">
+                        <span>Info</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                    <div class="pl-4 mt-2 space-y-1 hidden">
+                        <a href="faq.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Toyger Breed</a>
+                        <a href="blog2.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Adoption Process</a>
+                        <a href="transport.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Pet Transport</a>
+                        <a href="Privacy.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Privacy Policy</a>
+                        <a href="Refund.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Refund Policy</a>
+                        <a href="Terms.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Terms of Service</a>
+                        <a href="Shipping.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Shipping Policy</a>
+                    </div>
+                </div>
+                <a href="course3.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Gallery</a>
+                <a href="faqs.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">FAQs</a>
+                <a href="contact.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Contact Us</a>
+                <a href="blog.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Blog</a>
             </div>
         </div>
     </header>
@@ -218,16 +269,16 @@
                     <a href="index.html" aria-label="verified"><img src="image/ty.webp" loading="lazy" alt="Trusted Toyger Breeder" style="width: 70%; max-width: 300px;">
                     </div>
                     <div class="flex space-x-4">
-                        <a href="index.html" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
+                        <a href="https://www.facebook.com/" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
                             <i class="ri-facebook-fill ri-lg"></i>
                         </a>
-                        <a href="index.html" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
+                        <a href="https://www.instagram.com/" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
                             <i class="ri-instagram-line ri-lg"></i>
                         </a>
-                        <a href="index.html" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
+                        <a href="https://www.pinterest.com/" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
                             <i class="ri-pinterest-line ri-lg"></i>
                         </a>
-                        <a href="index.html" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
+                        <a href="https://www.youtube.com/" aria-label="home" class="text-gray-300 hover:text-primary transition-colors">
                             <i class="ri-youtube-line ri-lg"></i>
                         </a>
                     </div>
@@ -279,58 +330,62 @@
         </div>
     </footer>
     
-    <!-- Mobile Menu (Hidden by default) -->
-    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobile-menu-overlay">
-        <div class="bg-white h-full w-4/5 max-w-sm p-6 transform transition-transform -translate-x-full" id="mobile-menu">
-            <div class="flex justify-between items-center mb-8">
-                <a href="index.html" class="font-['Pacifico'] text-2xl text-primary">Christa Toygers🐈</a>
-                <button id="close-menu" class="w-10 h-10 flex items-center justify-center">
-                    <i class="ri-close-line ri-2x text-gray-800"></i>
-                </button>
-            </div>
-            
-            <nav class="flex flex-col space-y-4">
-                <a href="index.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">About Us</a>
-                <a href="course1.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Available Kittens</a>
-                <a href="Health.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Health Guarantee</a>
-                <a href="course2.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Kings & Queens</a>
-                <a href="course3.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Gallery</a>
-                <a href="blog2.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Adoption Process</a>
-                <a href="contact.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Contact Us</a>
-                <a href="faq.html" class="text-gray-800 hover:text-primary py-2 border-b border-gray-100">Blog</a>
-            </nav>
-        </div>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('.lg\\:hidden');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeMenuButton = document.getElementById('close-menu');
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden.w-10.h-10');
+            const mobileMenu = document.querySelector('.hidden.md\\:hidden.bg-white');
             
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenuOverlay.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.remove('-translate-x-full');
-                }, 10);
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Mobile submenu toggles
+            const mobileSubmenuButtons = document.querySelectorAll('.md\\:hidden .flex.items-center.justify-between.w-full');
+            
+            mobileSubmenuButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    submenu.classList.toggle('hidden');
+                    
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('ri-arrow-down-s-line')) {
+                        icon.classList.remove('ri-arrow-down-s-line');
+                        icon.classList.add('ri-arrow-up-s-line');
+                    } else {
+                        icon.classList.remove('ri-arrow-up-s-line');
+                        icon.classList.add('ri-arrow-down-s-line');
+                    }
+                });
             });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
             
-            closeMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.add('-translate-x-full');
-                setTimeout(() => {
-                    mobileMenuOverlay.classList.add('hidden');
-                }, 300);
-            });
-            
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    mobileMenu.classList.add('-translate-x-full');
-                    setTimeout(() => {
-                        mobileMenuOverlay.classList.add('hidden');
-                    }, 300);
-                }
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('text-primary', 'border-primary');
+                        btn.classList.add('text-gray-600');
+                    });
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('text-primary', 'border-b-2', 'border-primary');
+                    button.classList.remove('text-gray-600');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
             });
         });
     </script>
