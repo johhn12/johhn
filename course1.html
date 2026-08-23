@@ -55,11 +55,23 @@
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <a href="index.html"aria-label="home"><img src="image/faviconn.webp" alt="Toyger Cat For Sale"></a>
-            
+
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="index.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
                 <a href="about.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">About Us</a>
-                <a href="course1.html" class="nav-link active text-gray-800 hover:text-primary font-medium transition-colors">Available Kittens</a>
+                <div class="relative group">
+                    <button class="nav-link text-gray-800 font-medium hover:text-primary transition-colors flex items-center !rounded-button whitespace-nowrap">
+                        Available Kittens
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md p-2 hidden group-hover:block z-10">
+                        <a href="course1.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Available Kittens</a>
+                        <a href="waitlist.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Waitlist</a>
+                        <a href="Litters.html" class="nav-link active block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Previous Litters</a>
+                    </div>
+                </div>
                 <a href="Health.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Health Guarantee</a>
                 <a href="course2.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Studs & Queens</a>
                 <a href="course3.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Gallery</a>
@@ -84,7 +96,7 @@
                 <a href="contact.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Contact Us</a>
                 <a href="blog.html" class="nav-link text-gray-800 hover:text-primary font-medium transition-colors">Blog</a>
             </nav>
-            
+
             <!-- Mobile Menu Button -->
             <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 !rounded-button whitespace-nowrap">
                 <i class="ri-menu-line ri-xl"></i>
@@ -96,7 +108,19 @@
             <div class="px-4 py-3 space-y-1">
                 <a href="index.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Home</a>
                 <a href="about.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">About Us</a>
-                <a href="course1.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Available Kittens</a>
+                <div class="px-3 py-2">
+                    <button class="nav-link flex items-center justify-between w-full text-gray-800 font-medium !rounded-button whitespace-nowrap">
+                        <span>Available Kittens</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                    <div class="pl-4 mt-2 space-y-1 hidden">
+                        <a href="course1.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Available Kittens</a>
+                        <a href="waitlist.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Waitlist</a>
+                        <a href="Litters.html" class="nav-link block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 rounded">Previous Litters</a>
+                    </div>
+                </div>
                 <a href="Health.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Health Guarantee</a>
                 <a href="course2.html" class="nav-link block px-3 py-2 rounded text-gray-800 font-medium hover:bg-gray-100">Studs & Queens</a>
                 <div class="px-3 py-2">
@@ -742,7 +766,7 @@
                     <h3 class="text-xl font-bold mb-6">Resources</h3>
                     <ul class="space-y-3">
                         <li><a href="faqs.html" class="text-gray-300 hover:text-white transition-colors">FAQs</a></li>
-                        <li><a href="https://www.thesprucepets.com/toyger-cat-profile-554213" class="text-gray-300 hover:text-white transition-colors">Toyger Care Guide</a></li>
+                        <li><a href="Litters.html" class="text-gray-300 hover:text-white transition-colors">Previous Kittens</a></li>
                         <li><a href="Health.html" class="text-gray-300 hover:text-white transition-colors">Health Guarantee</a></li>
                         <li><a href="Documents/CONTRACT - AGREEEMENT.pdf.pdf" class="text-gray-300 hover:text-white transition-colors">Adoption Contract</a></li>
                         <li><a href="https://www.amazon.com/s?k=toyger+cat&crid=3FKDX3JK8PA2O&sprefix=toyger%2Caps%2C817&ref=nb_sb_ss_fb_1_6_ts-doa-p" class="text-gray-300 hover:text-white transition-colors">Recommended Products</a></li>
