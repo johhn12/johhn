@@ -1776,5 +1776,244 @@
             });
         });
     </script>
+
+<!-- ================================
+     MOBILE STICKY AVAILABLE KITTENS
+================================ -->
+
+<a href="course1.html" class="mobile-kitten-cta" aria-label="View Available Toyger Kittens">
+
+    <span class="cta-paw">🐾</span>
+
+    <span class="cta-content">
+        <strong>View Kittens</strong>
+        <small>Meet your future Toyger</small>
+    </span>
+
+    <span class="cta-arrow">→</span>
+
+</a>
+
+
+<style>
+/* =================================
+   MOBILE STICKY KITTEN BUTTON
+================================= */
+
+.mobile-kitten-cta {
+    display: none;
+}
+
+
+/* =================================
+   MOBILE VERSION
+================================= */
+
+@media (max-width: 768px) {
+
+    .mobile-kitten-cta {
+        position: fixed;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        height: 66px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 17px;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        border: 1px solid rgba(177, 143, 91, 0.45);
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.16),
+            0 2px 8px rgba(0, 0, 0, 0.08);
+
+        text-decoration: none;
+
+        z-index: 99999;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+
+    /* Hover / Tap */
+
+    .mobile-kitten-cta:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.20),
+            0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =================================
+       PAW ICON
+    ================================= */
+
+    .cta-paw {
+        width: 43px;
+        height: 43px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 12px;
+
+        background: #f5eee4;
+
+        border-radius: 50%;
+
+        font-size: 20px;
+
+        flex-shrink: 0;
+
+        box-shadow:
+            inset 0 0 0 1px rgba(177, 143, 91, 0.15);
+    }
+
+
+    /* =================================
+       TEXT
+    ================================= */
+
+    .cta-content {
+        display: flex;
+        flex-direction: column;
+
+        line-height: 1.15;
+
+        flex: 1;
+    }
+
+
+    .cta-content strong {
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        letter-spacing: 0.2px;
+
+        color: #29251f;
+    }
+
+
+    .cta-content small {
+        margin-top: 4px;
+
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+
+        font-size: 11px;
+
+        color: #777;
+
+        letter-spacing: 0.2px;
+    }
+
+
+    /* =================================
+       ARROW
+    ================================= */
+
+    .cta-arrow {
+        width: 38px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #b18f5b;
+
+        color: #fff;
+
+        font-size: 21px;
+
+        font-weight: 400;
+
+        flex-shrink: 0;
+
+        transition: transform 0.25s ease;
+    }
+
+
+    .mobile-kitten-cta:hover .cta-arrow {
+        transform: translateX(3px);
+    }
+
+
+    /* =================================
+       VERY SMALL PHONES
+    ================================= */
+
+    @media (max-width: 360px) {
+
+        .mobile-kitten-cta {
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+
+            height: 61px;
+
+            padding: 0 13px;
+        }
+
+        .cta-paw {
+            width: 39px;
+            height: 39px;
+
+            margin-right: 9px;
+
+            font-size: 18px;
+        }
+
+        .cta-content strong {
+            font-size: 14px;
+        }
+
+        .cta-content small {
+            font-size: 10px;
+        }
+
+        .cta-arrow {
+            width: 34px;
+            height: 34px;
+
+            font-size: 18px;
+        }
+    }
+
+}
+
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+.mobile-kitten-cta:focus-visible {
+    outline: 3px solid rgba(177, 143, 91, 0.45);
+    outline-offset: 3px;
+}
+</style>
 </body>
 </html>
