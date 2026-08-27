@@ -172,6 +172,7 @@
              style="background-image: url('image/1.webp');">
         </div>
 
+
     </div>
 
 
@@ -1061,6 +1062,261 @@
 }
 </style>
 
+
+<script>
+/* =========================================
+   HERO SLIDESHOW
+========================================= */
+
+(function () {
+
+    const slides =
+        document.querySelectorAll(".hero-slide");
+
+    const dots =
+        document.querySelectorAll(".hero-dot");
+
+    const previous =
+        document.querySelector(".hero-prev");
+
+    const next =
+        document.querySelector(".hero-next");
+
+    const title =
+        document.getElementById("heroTitle");
+
+    const description =
+        document.getElementById("heroDescription");
+
+
+    /*
+       CHANGE THESE TEXTS TO MATCH
+       EACH PHOTOGRAPH.
+    */
+
+    const heroContent = [
+
+        {
+            title: "Raised With Love. Ready For Life.",
+
+            description:
+            "Our kittens grow up surrounded by people, attention, play, and everyday family life."
+        },
+        
+        {
+            title: "Meet Your Future Toyger",
+
+            description:
+            "Distinctive Toyger kittens raised with care in our home and prepared for loving families."
+        },
+
+
+        {
+            title: "Find The Toyger That Feels Like Family",
+
+            description:
+            "Explore our available kittens and discover the personality, markings, and charm that make each Toyger unique."
+        },
+        
+        {
+            title: "Where Wild Beauty Meets Gentle Hearts",
+
+            description:
+            "Discover beautifully marked Toygers with playful personalities, confident temperaments, and loving dispositions."
+        }
+
+
+    ];
+
+
+    let currentSlide = 0;
+
+    let slideTimer;
+
+
+    /*
+       SHOW SLIDE
+    */
+
+    function showSlide(index) {
+
+        currentSlide =
+            (index + slides.length) %
+            slides.length;
+
+
+        slides.forEach(function (slide, i) {
+
+            slide.classList.toggle(
+                "active",
+                i === currentSlide
+            );
+
+        });
+
+
+        dots.forEach(function (dot, i) {
+
+            dot.classList.toggle(
+                "active",
+                i === currentSlide
+            );
+
+        });
+
+
+        if (heroContent[currentSlide]) {
+
+            title.textContent =
+                heroContent[currentSlide].title;
+
+            description.textContent =
+                heroContent[currentSlide].description;
+
+        }
+
+    }
+
+
+    /*
+       NEXT SLIDE
+    */
+
+    function nextSlide() {
+
+        showSlide(currentSlide + 1);
+
+        restartTimer();
+
+    }
+
+
+    /*
+       PREVIOUS SLIDE
+    */
+
+    function previousSlide() {
+
+        showSlide(currentSlide - 1);
+
+        restartTimer();
+
+    }
+
+
+    /*
+       AUTOMATIC SLIDESHOW
+       6.5 SECONDS
+    */
+
+    function startTimer() {
+
+        slideTimer =
+            setInterval(function () {
+
+                showSlide(currentSlide + 1);
+
+            }, 6000);
+
+    }
+
+
+    function restartTimer() {
+
+        clearInterval(slideTimer);
+
+        startTimer();
+
+    }
+
+
+    /*
+       BUTTON EVENTS
+    */
+
+    if (next) {
+
+        next.addEventListener(
+            "click",
+            nextSlide
+        );
+
+    }
+
+
+    if (previous) {
+
+        previous.addEventListener(
+            "click",
+            previousSlide
+        );
+
+    }
+
+
+    /*
+       DOT EVENTS
+    */
+
+    dots.forEach(function (dot, index) {
+
+        dot.addEventListener(
+            "click",
+            function () {
+
+                showSlide(index);
+
+                restartTimer();
+
+            }
+        );
+
+    });
+
+
+    /*
+       PAUSE WHILE USER IS INTERACTING
+    */
+
+    const hero =
+        document.querySelector(".toyger-hero");
+
+
+    if (hero) {
+
+        hero.addEventListener(
+            "mouseenter",
+            function () {
+
+                clearInterval(slideTimer);
+
+            }
+        );
+
+
+        hero.addEventListener(
+            "mouseleave",
+            function () {
+
+                startTimer();
+
+            }
+        );
+
+    }
+
+
+    /*
+       START
+    */
+
+    showSlide(0);
+
+    startTimer();
+
+})();
+</script>
+
     <!-- About Us Section -->
     <section class="py-20">
         <div class="container mx-auto px-4">
@@ -1443,259 +1699,6 @@
     radius: 50000
   }).addTo(map).bindPopup("Approximate 50km radius around Ohio center.");
 
-</script>
-
-<script>
-/* =========================================
-   HERO SLIDESHOW
-========================================= */
-
-(function () {
-
-    const slides =
-        document.querySelectorAll(".hero-slide");
-
-    const dots =
-        document.querySelectorAll(".hero-dot");
-
-    const previous =
-        document.querySelector(".hero-prev");
-
-    const next =
-        document.querySelector(".hero-next");
-
-    const title =
-        document.getElementById("heroTitle");
-
-    const description =
-        document.getElementById("heroDescription");
-
-
-    /*
-       CHANGE THESE TEXTS TO MATCH
-       EACH PHOTOGRAPH.
-    */
-
-    const heroContent = [
-
-        {
-            title: "Raised With Love. Ready For Life.",
-
-            description:
-            "Our kittens grow up surrounded by people, attention, play, and everyday family life."
-        },
-        
-        {
-            title: "Meet Your Future Toyger",
-
-            description:
-            "Distinctive Toyger kittens raised with care in our home and prepared for loving families."
-        },
-
-        {
-            title: "Find The Toyger That Feels Like Family",
-
-            description:
-            "Explore our available kittens and discover the personality, markings, and charm that make each Toyger unique."
-        }
-
-        {
-            title: "Where Wild Beauty Meets Gentle Hearts",
-
-            description:
-            "Discover beautifully marked Toygers with playful personalities, confident temperaments, and loving dispositions."
-        },
-
-
-    ];
-
-
-    let currentSlide = 0;
-
-    let slideTimer;
-
-
-    /*
-       SHOW SLIDE
-    */
-
-    function showSlide(index) {
-
-        currentSlide =
-            (index + slides.length) %
-            slides.length;
-
-
-        slides.forEach(function (slide, i) {
-
-            slide.classList.toggle(
-                "active",
-                i === currentSlide
-            );
-
-        });
-
-
-        dots.forEach(function (dot, i) {
-
-            dot.classList.toggle(
-                "active",
-                i === currentSlide
-            );
-
-        });
-
-
-        if (heroContent[currentSlide]) {
-
-            title.textContent =
-                heroContent[currentSlide].title;
-
-            description.textContent =
-                heroContent[currentSlide].description;
-
-        }
-
-    }
-
-
-    /*
-       NEXT SLIDE
-    */
-
-    function nextSlide() {
-
-        showSlide(currentSlide + 1);
-
-        restartTimer();
-
-    }
-
-
-    /*
-       PREVIOUS SLIDE
-    */
-
-    function previousSlide() {
-
-        showSlide(currentSlide - 1);
-
-        restartTimer();
-
-    }
-
-
-    /*
-       AUTOMATIC SLIDESHOW
-       6.5 SECONDS
-    */
-
-    function startTimer() {
-
-        slideTimer =
-            setInterval(function () {
-
-                showSlide(currentSlide + 1);
-
-            }, 6000);
-
-    }
-
-
-    function restartTimer() {
-
-        clearInterval(slideTimer);
-
-        startTimer();
-
-    }
-
-
-    /*
-       BUTTON EVENTS
-    */
-
-    if (next) {
-
-        next.addEventListener(
-            "click",
-            nextSlide
-        );
-
-    }
-
-
-    if (previous) {
-
-        previous.addEventListener(
-            "click",
-            previousSlide
-        );
-
-    }
-
-
-    /*
-       DOT EVENTS
-    */
-
-    dots.forEach(function (dot, index) {
-
-        dot.addEventListener(
-            "click",
-            function () {
-
-                showSlide(index);
-
-                restartTimer();
-
-            }
-        );
-
-    });
-
-
-    /*
-       PAUSE WHILE USER IS INTERACTING
-    */
-
-    const hero =
-        document.querySelector(".toyger-hero");
-
-
-    if (hero) {
-
-        hero.addEventListener(
-            "mouseenter",
-            function () {
-
-                clearInterval(slideTimer);
-
-            }
-        );
-
-
-        hero.addEventListener(
-            "mouseleave",
-            function () {
-
-                startTimer();
-
-            }
-        );
-
-    }
-
-
-    /*
-       START
-    */
-
-    showSlide(0);
-
-    startTimer();
-
-})();
 </script>
 
 <!-- ================================
